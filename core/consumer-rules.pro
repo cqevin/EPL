@@ -78,5 +78,7 @@
 }
 
 
-##---------------Begin: proguard configuration for ViewModel  ----------
--keep public class * extends androidx.lifecycle.ViewModel {*;}
+##---------------Begin: proguard configuration for FavoriteViewModel  ----------
+-keepclassmembers,allowobfuscation class com.chriskevin.epl.favorite.FavoriteViewModel { *; }
+# or
+#-keepclassmembers,allowobfuscation class * extends androidx.lifecycle.ViewModel {*;}
