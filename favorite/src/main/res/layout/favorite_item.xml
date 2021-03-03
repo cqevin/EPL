@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="favorite"
+            type="com.chriskevin.epl.core.domain.model.FavoriteTeam" />
+
+        <variable
+            name="clickListener"
+            type="com.chriskevin.epl.util.AdapterListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="@{() -> clickListener.onClick(favorite.id)}"
+        android:paddingVertical="@dimen/grid_1">
+
+        <ImageView
+            android:id="@+id/team_badge"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="@dimen/grid_1_5"
+            android:contentDescription="@string/team_badge"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/team_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0"
+            app:teamBadge="@{favorite.crestUrl}"
+            tools:src="@drawable/ic_mu" />
+
+        <TextView
+            android:id="@+id/team_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/grid_1_5"
+            android:text="@{favorite.name}"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/team_badge"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Manchester United FC" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

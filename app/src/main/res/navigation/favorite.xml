@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/favorite"
+    app:moduleName="favorite"
+    app:startDestination="@id/favoriteFragment">
+
+    <include app:graph="@navigation/team_details" />
+
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.chriskevin.epl.favorite.FavoriteFragment"
+        android:label="fragment_favorite">
+        <action
+            android:id="@+id/action_favoriteFragment_to_teamDetails"
+            app:destination="@id/teamDetails">
+            <argument
+                android:name="teamId"
+                app:argType="integer" />
+        </action>
+    </fragment>
+</navigation>

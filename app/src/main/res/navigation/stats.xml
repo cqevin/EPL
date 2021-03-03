@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/stats"
+    app:startDestination="@id/scorersFragment">
+
+    <include app:graph="@navigation/team_details" />
+
+    <fragment
+        android:id="@+id/scorersFragment"
+        android:name="com.chriskevin.epl.ui.scorers.ScorersFragment"
+        android:label="fragment_scorers"
+        tools:layout="@layout/fragment_scorers">
+        <action
+            android:id="@+id/action_scorersFragment_to_teamDetails"
+            app:destination="@id/teamDetails">
+            <argument
+                android:name="teamId"
+                app:argType="integer" />
+        </action>
+    </fragment>
+</navigation>

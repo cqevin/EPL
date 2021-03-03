@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="squad"
+            type="com.chriskevin.epl.core.domain.model.TeamSquad" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/squad_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/grid_2"
+            android:layout_marginTop="@dimen/grid_1_5"
+            android:text="@{squad.name}"
+            android:textAppearance="?textAppearanceBody1"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Donny van de Beek" />
+
+        <TextView
+            android:id="@+id/squad_position"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_0_5"
+            android:text="@{!squad.role.equals(`PLAYER`) ? squad.role : squad.position}"
+            android:textAppearance="?textAppearanceBody1"
+            app:layout_constraintEnd_toEndOf="@id/squad_name"
+            app:layout_constraintStart_toStartOf="@id/squad_name"
+            app:layout_constraintTop_toBottomOf="@id/squad_name"
+            tools:text="Midfielder" />
+
+        <TextView
+            android:id="@+id/squad_nationality"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_0_5"
+            android:layout_marginBottom="@dimen/grid_1_5"
+            android:text="@{squad.nationality}"
+            android:textAppearance="?textAppearanceCaption"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/squad_name"
+            app:layout_constraintStart_toStartOf="@id/squad_name"
+            app:layout_constraintTop_toBottomOf="@id/squad_position"
+            tools:text="Netherlands" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:alpha="0.5"
+            android:background="@drawable/divider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

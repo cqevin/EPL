@@ -1,0 +1,16 @@
+<resources>
+    <!-- Top-level theme -->
+    <style name="Theme.EPL.DayNight" parent="Theme.EPL.Night" />
+
+    <!-- Base application theme. -->
+    <style name="Theme.EPL.Night" parent="Theme.EPL">
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+        <item name="bottomNavigationStyle">@style/Widget.EPL.BottomNavigationView</item>
+        <item name="materialButtonStyle">@style/Widget.EPL.Button.OutlinedButton</item>
+        <item name="linearProgressIndicatorStyle">@style/Widget.EPL.LinearProgressIndicator</item>
+        <item name="snackbarButtonStyle">@style/Widget.EPL.Button.TextButton</item>
+    </style>
+
+</resources>

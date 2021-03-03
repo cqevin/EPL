@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.EPL.Toolbar" parent="Widget.MaterialComponents.Toolbar.Surface"/>
+
+    <!--Bottom Nav-->
+    <style name="Widget.EPL.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.PrimarySurface">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.EPL.BottomNavigationView</item>
+    </style>
+    <style name="ThemeOverlay.EPL.BottomNavigationView" parent="">
+        <item name="colorPrimary">?colorOnSurface</item>
+    </style>
+
+    <!--Button-->
+    <style name="Widget.EPL.Button.OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.EPL.Button.TextButton</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="strokeColor">@color/red</item>
+    </style>
+    <style name="Widget.EPL.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.EPL.Button.TextButton</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="strokeColor">@null</item>
+    </style>
+    <style name="ThemeOverlay.EPL.Button.TextButton" parent="">
+        <item name="colorPrimary">@color/red</item>
+    </style>
+
+    <!--Progress Indicator-->
+    <style name="Widget.EPL.LinearProgressIndicator" parent="Widget.MaterialComponents.LinearProgressIndicator">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.EPL.LinearProgressIndicator</item>
+    </style>
+    <style name="ThemeOverlay.EPL.LinearProgressIndicator" parent="">
+        <item name="colorPrimary">@color/red</item>
+    </style>
+
+</resources>

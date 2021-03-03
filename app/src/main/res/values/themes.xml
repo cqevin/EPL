@@ -1,0 +1,51 @@
+<resources>
+    <!-- Top-level theme -->
+    <style name="Theme.EPL.DayNight" parent="Theme.EPL" />
+
+    <!-- Base application theme. -->
+    <style name="Theme.EPL" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/dark_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/red</item>
+        <item name="colorSecondaryVariant">@color/dark_red</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/white_alpha_060</item>
+        <!-- Nav bar color. -->
+        <item name="android:navigationBarColor">@color/nav_bar</item>
+        <!-- Customize your theme here. -->
+
+        <!--Material type attributes-->
+        <item name="textAppearanceHeadline1">@style/TextAppearance.EPL.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.EPL.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.EPL.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.EPL.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.EPL.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.EPL.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.EPL.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.EPL.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.EPL.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.EPL.Body2</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.EPL.Caption</item>
+        <item name="textAppearanceButton">@style/TextAppearance.EPL.Button</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.EPL.Overline</item>
+
+        <item name="toolbarStyle">@style/Widget.EPL.Toolbar</item>
+        <item name="bottomNavigationStyle">
+            @style/Widget.MaterialComponents.BottomNavigationView.PrimarySurface
+        </item>
+    </style>
+
+    <style name="ThemeOverlay.EPL.White" parent="">
+        <item name="colorPrimary">@color/white</item>
+    </style>
+
+    <!--Launcher-->
+    <style name="Theme.EPL.DayNight.Launcher">
+        <item name="android:windowBackground">@drawable/launch_screen</item>
+    </style>
+</resources>

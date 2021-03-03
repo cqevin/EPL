@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/teamDetails"
+    app:startDestination="@id/teamDetailsFragment">
+
+    <fragment
+        android:id="@+id/teamDetailsFragment"
+        android:name="com.chriskevin.epl.ui.teamdetails.TeamDetailsFragment"
+        android:label="fragment_team_details"
+        tools:layout="@layout/fragment_team_details">
+        <argument
+            android:name="teamId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_teamDetailsFragment_to_squadFragment"
+            app:destination="@id/squadFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/squadFragment"
+        android:name="com.chriskevin.epl.ui.teamdetails.SquadFragment"
+        android:label="fragment_squad"
+        tools:layout="@layout/fragment_squad">
+        <argument
+            android:name="squad"
+            app:argType="com.chriskevin.epl.core.domain.model.TeamSquad[]" />
+    </fragment>
+
+</navigation>

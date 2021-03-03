@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="blue">#360d3a</color>
+    <color name="dark_blue">#160016</color>
+    <color name="red">#ff2882</color>
+    <color name="dark_red">#c60056</color>
+
+    <color name="yellow">#ffeb46</color>
+    <color name="black_alpha_020">#33000000</color>
+    <color name="white_alpha_060">#99FFFFFF</color>
+    <color name="nav_bar">@color/black_alpha_020</color>
+</resources>

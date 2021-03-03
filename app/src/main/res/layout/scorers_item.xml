@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="scorers"
+            type="com.chriskevin.epl.core.domain.model.Scorers" />
+
+        <variable
+            name="clickListener"
+            type="com.chriskevin.epl.util.AdapterListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/pos"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/grid_2"
+            android:text="@{String.valueOf(scorers.position)}"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceBody1"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/player_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="10" />
+
+        <TextView
+            android:id="@+id/player_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_2"
+            android:layout_marginEnd="@dimen/grid_1"
+            android:layout_marginBottom="@dimen/grid_0_5"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{scorers.player.name}"
+            android:textAppearance="?textAppearanceBody1"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/team_name"
+            app:layout_constraintEnd_toStartOf="@id/player_goals"
+            app:layout_constraintStart_toEndOf="@id/pos"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Bruno Fernandes" />
+
+        <TextView
+            android:id="@+id/player_goals"
+            android:layout_width="28dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/grid_1"
+            android:text="@{String.valueOf(scorers.numberOfGoals)}"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceBody2"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/player_name"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="99" />
+
+        <TextView
+            android:id="@+id/team_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_0_5"
+            android:layout_marginBottom="@dimen/grid_2"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{scorers.team.name}"
+            android:foreground="?attr/selectableItemBackground"
+            android:onClick="@{() -> clickListener.onClick(scorers.team.id)}"
+            android:textAppearance="?textAppearanceCaption"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/player_name"
+            app:layout_constraintStart_toStartOf="@id/player_name"
+            app:layout_constraintTop_toBottomOf="@id/player_name"
+            tools:text="Manchester United FC" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:alpha="0.5"
+            android:background="@drawable/divider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
