@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="table"
             type="com.chriskevin.epl.core.domain.model.Table" />
@@ -28,10 +29,10 @@
             android:text="@{String.valueOf(table.position)}"
             android:textAlignment="center"
             android:textAppearance="?textAppearanceBody1"
-            app:layout_constraintBottom_toBottomOf="@id/team_badge"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/team_badge"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/team_badge"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="99" />
 
         <ImageView
@@ -57,53 +58,53 @@
             android:text="@{table.team.name}"
             android:textAppearance="?textAppearanceBody1"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@id/team_badge"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/team_played"
             app:layout_constraintStart_toEndOf="@id/team_badge"
-            app:layout_constraintTop_toTopOf="@id/team_badge"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="Manchester United FC" />
 
         <TextView
             android:id="@+id/team_played"
             android:layout_width="24dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginEnd="@dimen/grid_1"
-            android:text="@{String.valueOf(table.playedGames)}"
+            android:text="@{table.playedGames}"
             android:textAlignment="center"
             android:textAppearance="?textAppearanceBody1"
-            app:layout_constraintBottom_toBottomOf="@id/team_badge"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/team_goal_dif"
             app:layout_constraintStart_toEndOf="@id/team_name"
-            app:layout_constraintTop_toTopOf="@id/team_badge"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="38" />
 
         <TextView
             android:id="@+id/team_goal_dif"
             android:layout_width="28dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginEnd="@dimen/grid_1"
-            android:text="@{String.valueOf(table.goalDifference)}"
+            android:text="@{table.goalDifference}"
             android:textAlignment="center"
             android:textAppearance="?textAppearanceBody1"
-            app:layout_constraintBottom_toBottomOf="@id/team_badge"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/team_points"
             app:layout_constraintStart_toEndOf="@id/team_played"
-            app:layout_constraintTop_toTopOf="@id/team_badge"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="999" />
 
         <TextView
             android:id="@+id/team_points"
             android:layout_width="28dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginEnd="@dimen/grid_1"
-            android:text="@{String.valueOf(table.points)}"
+            android:text="@{table.points}"
             android:textAlignment="center"
             android:textAppearance="?textAppearanceBody1"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@id/team_badge"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/team_goal_dif"
-            app:layout_constraintTop_toTopOf="@id/team_badge"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="100" />
 
         <View

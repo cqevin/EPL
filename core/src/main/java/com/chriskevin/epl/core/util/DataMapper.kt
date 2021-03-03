@@ -12,9 +12,9 @@ object DataMapper {
             Table(
                 position = it.position,
                 team = TableTeam(id = it.team.id, name = it.team.name, crestUrl = it.team.crestUrl),
-                playedGames = it.playedGames,
-                goalDifference = it.goalDifference,
-                points = it.points
+                playedGames = it.playedGames.toString(),
+                goalDifference = it.goalDifference.toString(),
+                points = it.points.toString()
             )
         }
 
